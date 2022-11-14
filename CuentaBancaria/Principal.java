@@ -55,17 +55,18 @@ public class Principal {
 
         cuentas = new Cuenta[nCuentas];
 
-        for (int i=0 ; i<cuentas.length; i++){
-            System.out.println("Digite los datos para la cuenta"+(i+1)+": ");
+        for (int i=0 ; i<cuentas.length; i++) {
+            System.out.println("Digite los datos para la cuenta" + (i + 1) + ": ");
             System.out.println("Digite el numero de Cuenta");
-            numeroCuenta= entrada.nextInt();
-
+            numeroCuenta = entrada.nextInt();
             System.out.println("Digita el saldo de la cuenta: ");
-            saldo= entrada.nextDouble();
-            
+            saldo = entrada.nextDouble();
+
 
             cuentas[i] = new Cuenta(numeroCuenta, saldo);
 
+        }
+//        Inicializamos la clase cuenta
             cliente = new Cliente(nombre, apellido, dni, cuentas);
 
 //            MENU DE OPCIONES: Consultar, retirar o ingresar.
@@ -142,4 +143,4 @@ do{
 
         }
     }
-}
+
