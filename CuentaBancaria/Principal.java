@@ -24,7 +24,6 @@ public class Principal {
 
         if (found == false){
             indice=-1;
-
         }
     return indice;
 
@@ -57,12 +56,13 @@ public class Principal {
         cuentas = new Cuenta[nCuentas];
 
         for (int i=0 ; i<cuentas.length; i++){
-            System.out.println("Digite los datos para la cuenta: "+(i+1+": "));
+            System.out.println("Digite los datos para la cuenta"+(i+1)+": ");
             System.out.println("Digite el numero de Cuenta");
             numeroCuenta= entrada.nextInt();
 
             System.out.println("Digita el saldo de la cuenta: ");
             saldo= entrada.nextDouble();
+            
 
             cuentas[i] = new Cuenta(numeroCuenta, saldo);
 
@@ -87,7 +87,7 @@ do{
             indiceCuenta=buscarNumCuenta(cuentas, numeroCuenta);
 
             if (indiceCuenta == -1){
-                System.out.println("EL numero de Cuenta ingresado no existe");
+                System.out.println("\nEL numero de Cuenta ingresado no existe");
             }else{
                 System.out.println("\n Digita la cantidad de dinero a ingresar");
                 cantidad = entrada.nextDouble();

@@ -26,6 +26,6 @@ saldo +=cantidad;
 
     public void retirarDinero(double cantidad){
 
-        saldo +=cantidad;
+        saldo -=cantidad;
     }
 }

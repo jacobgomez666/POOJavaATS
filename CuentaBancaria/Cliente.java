@@ -5,16 +5,17 @@ public class Cliente {
     private String nombre;
     private String apellido;
     private String dni;
- Cuenta cuentas[];  //Creamos un arreglo de la clase Cuenta
+            Cuenta cuentas[];  //Creamos un arreglo de la clase Cuenta
 
 
 
 //    CONSTRUCTOR
 
-    public Cliente(String nombre, String apellido, String dni, Cuenta cuentas[]){
+    public Cliente(String nombre, String apellido, String dni, Cuenta [] cuentas){
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
+        this.cuentas = cuentas;
 
     }
 
