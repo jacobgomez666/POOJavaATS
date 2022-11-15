@@ -7,12 +7,12 @@ import java.util.Scanner;
 
 public class Principal {
 
-    //    Metodo estaticp para la busqueda secuencial de una cuenta
+    //    Metodo estatico para la busqueda secuencial de una cuenta
     public static int buscarNumCuenta(Cuenta cuentas[], int n) {
         int i = 0 , indice = 0;
         boolean found = false;
 
-//        Busqueda secuencial
+//        Busqueda secuencial del numero de cuenta digitad por el usuario
         while ((i < cuentas.length && (found == false))) {
             if (cuentas[i].getNumeroCuenta() == n){
                 found = true;
@@ -40,9 +40,10 @@ public class Principal {
         double saldo, cantidad;
         int opcion;
 
-        Cuenta cuentas[];
-        Cliente cliente;
+        Cuenta cuentas[];  //Inicialiamos un Objeto de la clase Cuenta
+        Cliente cliente;  //Instanciamos un objeto de la clase Cliente pero no inicializamos
 
+//        Preguntamos los atributos de la clase Cliente
         System.out.println("Digite el nombre de Cliente: ");
         nombre= entrada.nextLine();
         System.out.println("Digite el apellido: ");
@@ -52,9 +53,9 @@ public class Principal {
 
         System.out.println("Ahora digite cuantas cuentas tiene: ");
         nCuentas= entrada.nextInt();
-
         cuentas = new Cuenta[nCuentas];
 
+//        Preguntamos los atributos de la clase Cliente con un bucle porque es un arreglo
         for (int i=0 ; i<cuentas.length; i++) {
             System.out.println("Digite los datos para la cuenta" + (i + 1) + ": ");
             System.out.println("Digite el numero de Cuenta");
@@ -62,11 +63,11 @@ public class Principal {
             System.out.println("Digita el saldo de la cuenta: ");
             saldo = entrada.nextDouble();
 
-
+//Ahora si inicializamos la clase cuentas
             cuentas[i] = new Cuenta(numeroCuenta, saldo);
 
         }
-//        Inicializamos la clase cuenta
+//        Ahora si inicializamos la clase cliente
             cliente = new Cliente(nombre, apellido, dni, cuentas);
 
 //            MENU DE OPCIONES: Consultar, retirar o ingresar.
@@ -83,7 +84,7 @@ do{
     switch (opcion){
 
         case  1:
-            System.out.println("Digita al Numero de cuenta a donde vas a ingresar el dinero");
+            System.out.println("Digita el Numero de cuenta a donde vas a ingresar el dinero");
             numeroCuenta= entrada.nextInt();
             indiceCuenta=buscarNumCuenta(cuentas, numeroCuenta);
 
@@ -127,7 +128,7 @@ do{
             indiceCuenta=buscarNumCuenta(cuentas, numeroCuenta);
 
             if (indiceCuenta ==-1 ){
-                System.out.println("El numeor de cuenta ingresado no existe");
+                System.out.println("El numero de cuenta ingresado no existe");
             }else{
                 System.out.println("Tu saldo es: "+cliente.consultarSaldo(indiceCuenta));
             }

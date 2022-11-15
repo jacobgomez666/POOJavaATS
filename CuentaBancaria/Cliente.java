@@ -5,7 +5,7 @@ public class Cliente {
     private String nombre;
     private String apellido;
     private String dni;
-            Cuenta cuentas[];  //Creamos un arreglo de la clase Cuenta
+    Cuenta cuentas[];  //Creamos un arreglo de la clase Cuenta
 
 
 
