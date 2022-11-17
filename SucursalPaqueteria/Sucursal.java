@@ -12,7 +12,6 @@ public class Sucursal {
         this.numeroSucursal = numeroSucursal;
         this.direccion = direccion;
         this.ciudad = ciudad;
-
     }
 
 //    Metodos getters
@@ -31,8 +30,8 @@ public class Sucursal {
 
     public String mostrarDatosSucursal(){
         return "El numero de sucursal es: "+getNumeroSucursal()
-                +" con direccion en: "+getDireccion()
-                +" y ubicado en la ciudad de: "+getCiudad();
+                +" \ncon direccion en: "+getDireccion()
+                +"\n y ubicado en la ciudad de: "+getCiudad();
     }
 
     public double calcular_precio(Paquete todas){

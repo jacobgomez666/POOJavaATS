@@ -110,6 +110,7 @@ indice = -1;
                         numeroPaquete = entrada.nextInt();
                         System.out.println("\nDigite el DNI de la persona: ");
                         dni = entrada.nextLine();
+                        entrada.nextLine();
                         System.out.println("\nDigite el peso del paquete: ");
                         peso = entrada.nextDouble();
                         System.out.println("Digita la prioridad (0=normal, 1=alta, 2=express)");
@@ -152,8 +153,9 @@ indice = -1;
                     break;
 
                 case 5:
+                    System.out.println("\nLos datos de las sucursales son:");
+
                     for (int i=0; i<contadorSucursal; i++){
-                        System.out.println("\nLos datos de las sucursales son"+(i+1)+": ");
                         System.out.println(sucursal[i].mostrarDatosSucursal());
                     }
                     break;

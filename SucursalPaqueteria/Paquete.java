@@ -12,7 +12,7 @@ public class Paquete {
 //    CONSTRUCTOR
 
     public  Paquete(int numeroPaquete, String dni, double peso, int prioridad){
-        this.prioridad = numeroPaquete;
+        this.numeroPaquete = numeroPaquete;
         this.dni = dni;
         this.peso = peso;
         this.prioridad = prioridad;
