@@ -1,0 +1,10 @@
+Una clase abstracta es algo muy generico, Es una clase que no puede instanciar objetos. No representa algo especifico
+ y lo podemos crear para crear mas subclases.
+
+ Asi mismo pueden existir metodos abstractos
+
+ Los metodos asbrcatos no se implementan solo se definen.
+ por ejemplo: public abscract void alimentarse(); sin las {
+ }
+
+
